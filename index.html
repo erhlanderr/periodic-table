@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Periodic Table</title>
+
+      <link rel="stylesheet" href="css/style.css">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js'></script>
+    <!-- <script src='./js/DrawSVGlilugin.min.js'></script> -->
+
+    <script  src="js/index.js"></script>
+
+</head>
+
+<body>
+
+<!-- <div id="wrapper">
+
+<ul id="container"> -->
+  <!-- <li id="Hydro­gen" class="group-1 period-1 reactiveNonMetal">
+  <h3>Hydro­gen</h3>
+  <span class="atomicNumber">1</span>
+  <h1>H</h1>
+  ​<span class="atomicWeight">1.008</span>
+</li>
+
+<li id="He­lium" class="group-18 period-1 nobleGas">
+  <h3>He­lium</h3>
+  <span class="atomicNumber">2</span>
+  <h1>He  </h1>
+  ​<span class="atomicWeight">4.0026</span>
+</li>
+
+<li id="Lith­ium" class="group-1 period-2 alkaliMetal">
+  <h3>Lith­ium</h3>
+  <span class="atomicNumber">3</span>
+  <h1>Li</h1>
+  ​<span class="atomicWeight">6.94</span>
+</li>
+
+<li id="Beryl­lium" class="group-2 period-2 alkaliEarthMetal">
+  <h3>Beryl­lium</h3>
+  <span class="atomicNumber">4</span>
+  <h1>Be</h1>
+  ​<span class="atomicWeight">9.0122</span>
+</li>
+
+<li id="Boron" class="group-13 period-2 metalloid">
+  <h3>Boron</h3>
+  <span class="atomicNumber">5</span>
+  <h1>B</h1>
+  <span class="atomicWeight">​10.81</span>
+</li>
+<li id="Carbon" class="group-14 period-2 reactiveNonMetal">
+  <h3>Carbon</h3>
+  <span class="atomicNumber">6</span>
+  <h1>C</h1>
+  <span class="atomicWeight">​12.011</span>
+</li>
+
+<li id="Nitro­gen" class="group-15 period-2 reactiveNonMetal">
+  <h3>Nitro­gen</h3>
+  <span class="atomicNumber">7</span>
+  <h1>N</h1>
+  <span class="atomicWeight">​14.007</span>
+</li>
+
+<li id="Oxy­gen" class="group-16 period-2 reactiveNonMetal">
+  <h3>Oxy­gen</h3>
+  <span class="atomicNumber">8</span>
+  <h1>O</h1>
+  <span class="atomicWeight">​15.999</span>
+</li>
+
+<li id="Fluor­ine" class="group-17 period-2 reactiveNonMetal">
+  <h3>Fluor­ine</h3>
+  <span class="atomicNumber">9</span>
+  <h1>F</h1>
+  <span class="atomicWeight">​18.998</span>
+</li>
+
+<li id="Neon" class="group-18 period-2 nobleGas">
+    <h3>Neon</h3>
+  <span class="atomicNumber">10</span>
+  <h1>Ne</h1>
+  <span class="atomicWeight">​20.180</span>
+</li>
+
+<li id="So­dium" class="group-1 period-3 alkaliMetal">
+   <h3>So­dium</h3>
+  <span class="atomicNumber">11</span>
+  <h1>Na</h1>
+  <span class="atomicWeight">​22.990</span>
+</li>
+
+<li id="Magne­sium" class="group-2 period-3 alkaliEarthMetal">
+  <h3>Magne­sium</h3>
+  <span class="atomicNumber">12</span>
+  <h1>Mg</h1>
+  <span class="atomicWeight">​24.305</span>
+</li>
+
+<li id="Alumin­ium" class="group-13 period-3 postTransitionMetal">
+   <h3>Alumin­ium</h3>
+  <span class="atomicNumber">13</span>
+<h1>Al</h1>
+  <span class="atomicWeight">​26.982</span>
+</li>
+
+<li id="Sili­con" class="group-14 period-3 metalloid">
+   <h3>Sili­con</h3>
+  <span class="atomicNumber">14</span>
+<h1>Si</h1>
+  <span class="atomicWeight">​28.085</span>
+</li>
+
+<li id="Phosphorus" class="group-15 period-3 reactiveNonMetal">
+  <h3>Phosphorus</h3>
+  <span class="atomicNumber">15</span>
+  <h1>P</h1>
+  <span class="atomicWeight">​30.974</span>
+</li>
+
+<li id="Sulfur" class="group-16 period-3 reactiveNonMetal">
+  <h3>Sulfur</h3>
+  <span class="atomicNumber">16</span>
+  <h1>S</h1>
+  <span class="atomicWeight">​32.06</span>
+</li>
+
+<li id="Chlor­ine" class="group-17 period-3 reactiveNonMetal">
+  <h3>Chlor­ine</h3>
+  <span class="atomicNumber">17</span>
+  <h1>Cl</h1>
+  <span class="atomicWeight">​35.45</span>
+</li>
+
+<li id="Argon" class="group-18 period-3 nobleGas">
+  <h3>Argon</h3>
+  <span class="atomicNumber">18</span>
+  <h1>Ar</h1>
+  <span class="atomicWeight">​39.948</span>
+</li>
+
+<li id="Potas­sium" class="group-1 period-4 alkaliMetal">
+  <h3>Potas­sium</h3>
+  <span class="atomicNumber">19</span>
+  <h1>K</h1>
+  <span class="atomicWeight">​39.098</span>
+</li>
+
+<li id="Cal­cium" class="group-2 period-4 alkaliEarthMetal">
+  <h3>Cal­cium</h3>
+  <span class="atomicNumber">20</span>
+  <h1>Ca</h1>
+  <span class="atomicWeight">​40.078</span>
+</li>
+
+<li id="Scan­dium" class="group-3 period-4 transitionMetal">
+  <h3>Scan­dium</h3>
+  <span class="atomicNumber">21</span>
+  <h1>Sc</h1>
+  <span class="atomicWeight">​44.956</span>
+</li>
+
+<li id="Tita­nium" class="group-4 period-4 transitionMetal">
+   <h3>Tita­nium</h3>
+  <span class="atomicNumber">22</span>
+  <h1>Ti</h1>
+  <span class="atomicWeight">​47.867</span>
+</li>
+
+<li id="Vana­dium" class="group-5 period-4 transitionMetal">
+  <h3>Vana­dium</h3>
+  <span class="atomicNumber">23</span>
+  <h1>V</h1>
+  <span class="atomicWeight">​50.942</span>
+</li>
+
+<li id="Chrom­ium" class="group-6 period-4 transitionMetal">
+  <h3>Chrom­ium</h3>
+  <span class="atomicNumber">24</span>
+  <h1>Cr</h1>
+  <span class="atomicWeight">​51.996</span>
+</li>
+
+<li id="Manga­nese" class="group-7 period-4 transitionMetal">
+  <h3>Manga­nese</h3>
+  <span class="atomicNumber">25</span>
+  <h1>Mn</h1>
+  <span class="atomicWeight">​54.938</span>
+</li>
+
+<li id="Iron" class="group-8 period-4 transitionMetal">
+  <h3>Iron</h3>
+  <span class="atomicNumber">26</span>
+  <h1>Fe</h1>
+  <span class="atomicWeight">​55.845</span>
+</li>
+<li id="Cobalt" class="group-9 period-4 transitionMetal">
+     <h3>Cobalt</h3>
+  <span class="atomicNumber">27</span>
+  <h1>Co</h1>
+  <span class="atomicWeight">​58.933</span>
+</li>
+<li id="Nickel" class="group-10 period-4 transitionMetal">
+    <h3>Nickel</h3>
+  <span class="atomicNumber">28</span>
+  <h1>Ni</h1>
+  <span class="atomicWeight">​58.693</span>
+</li>
+<li id="Copper" class="group-11 period-4 transitionMetal">
+    <h3>Copper</h3>
+  <span class="atomicNumber">29</span>
+  <h1>Cu</h1>
+  <span class="atomicWeight">​63.546</span>
+</li>
+<li id="Zinc" class="group-12 period-4 postTransitionMetal">
+   <h3>Zinc</h3>
+  <span class="atomicNumber">30</span>
+  <h1>Zn</h1>
+  <span class="atomicWeight">​65.38</span>
+</li>
+<li id="Gallium" class="group-13 period-4 postTransitionMetal">
+  <h3>Gallium</h3>
+  <span class="atomicNumber">31</span>
+  <h1>Ga</h1>
+  <span class="atomicWeight">​69.723</span>
+</li>
+<li id="Germa­nium" class="group-14 period-4 metalloid">
+    <h3>Germa­nium</h3>
+  <span class="atomicNumber">32</span>
+  <h1>Ge</h1>
+  <span class="atomicWeight">​72.630</span>
+</li>
+<li id="Arsenic" class="group-15 period-4 metalloid">
+     <h3>Arsenic</h3>
+  <span class="atomicNumber">33</span>
+  <h1>As</h1>
+  <span class="atomicWeight">​74.922</span>
+</li>
+<li id="Sele­nium" class="group-16 period-4 reactiveNonMetal">
+  <h3>Sele­nium</h3>
+  <span class="atomicNumber">34</span>
+  <h1>Se</h1>
+  <span class="atomicWeight">​78.971</span>
+</li>
+<li id="Bromine" class="group-17 period-4 reactiveNonMetal">
+  <h3>Bromine</h3>
+  <span class="atomicNumber">35</span>
+  <h1>Br</h1>
+  <span class="atomicWeight">​79.904</span>
+</li>
+<li id="Krypton" class="group-18 period-4 nobleGas">
+  <h3>Krypton</h3>
+  <span class="atomicNumber">36</span>
+  <h1>Kr</h1>
+  <span class="atomicWeight">​83.798</span>
+</li>
+
+<li id="Rubid­ium" class="group-1 period-5 alkaliMetal">
+    <h3>Rubid­ium</h3>
+  <span class="atomicNumber">37</span>
+  <h1>Rb</h1>
+  <span class="atomicWeight">​85.468</span>
+</li>
+<li id="Stront­ium" class="group-2 period-5 alkaliEarthMetal">
+    <h3>Stront­ium</h3>
+  <span class="atomicNumber">38</span>
+  <h1>Sr</h1>
+  <span class="atomicWeight">​87.62</span>
+</li>
+<li id="Yttrium" class="group-3 period-5 transitionMetal">
+   <h3>Yttrium</h3>
+  <span class="atomicNumber">39</span>
+  <h1>Y</h1>
+  <span class="atomicWeight">​88.906</span>
+</li>
+<li id="Zirco­nium" class="group-4 period-5 transitionMetal">
+     <h3>Zirco­nium</h3>
+  <span class="atomicNumber">40</span>
+  <h1>Zr</h1>
+  <span class="atomicWeight">​91.224</span>
+</li>
+<li id="Nio­bium" class="group-5 period-5 transitionMetal">
+    <h3>Nio­bium</h3>
+  <span class="atomicNumber">41</span>
+  <h1>Nb</h1>
+  <span class="atomicWeight">​92.906</span>
+</li>
+<li id="Molyb­denum" class="group-6 period-5 transitionMetal">
+    <h3>Molyb­denum</h3>
+  <span class="atomicNumber">42</span>
+  <h1>Mo</h1>
+  <span class="atomicWeight">​95.95</span>
+</li>
+<li id="Tech­netium" class="group-7 period-5 transitionMetal">
+  <h3>Tech­netium</h3>
+  <span class="atomicNumber">43</span>
+  <h1>Tc</h1>
+  <span class="atomicWeight">​[98]</span>
+  </li>
+<li id="Ruthe­nium" class="group-8 period-5 transitionMetal">
+    <h3>Ruthe­nium</h3>
+  <span class="atomicNumber">44</span>
+  <h1>Ru</h1>
+  <span class="atomicWeight">​101.07</span>
+</li>
+<li id="Rho­dium" class="group-9 period-5 transitionMetal">
+    <h3>Rho­dium</h3>
+  <span class="atomicNumber">45</span>
+  <h1>Rh</h1>
+  <span class="atomicWeight">​102.91</span>
+</li>
+<li id="Pallad­ium" class="group-10 period-5 transitionMetal">
+     <h3>Pallad­ium</h3>
+  <span class="atomicNumber">46</span>
+  <h1>Pd</h1>
+  <span class="atomicWeight">​106.42</span>
+</li>
+<li id="Silver" class="group-11 period-5 transitionMetal">
+    <h3>Silver</h3>
+  <span class="atomicNumber">47</span>
+  <h1>Ag</h1>
+  <span class="atomicWeight">​107.87</span>
+</li>
+<li id="Cad­mium" class="group-12 period-5 postTransitionMetal">
+    <h3>Cad­mium</h3>
+  <span class="atomicNumber">48</span>
+  <h1>Cd</h1>
+  <span class="atomicWeight">​112.41</span>
+</li>
+<li id="Indium" class="group-13 period-5 postTransitionMetal">
+    <h3>Indium</h3>
+  <span class="atomicNumber">49</span>
+  <h1>In</h1>
+  <span class="atomicWeight">​114.82</span>
+</li>
+<li id="Tin" class="group-14 period-5 postTransitionMetal">
+  <h3>Tin</h3>
+  <span class="atomicNumber">50</span>
+  <h1>Sn</h1>
+  <span class="atomicWeight">​118.71</span>
+</li>
+<li id="Anti­mony" class="group-15 period-5 metalloid">
+   <h3>Anti­mony</h3>
+  <span class="atomicNumber">51</span>
+  <h1>Sb</h1>
+  <span class="atomicWeight">​121.76</span>
+</li>
+<li id="Tellur­ium" class="group-16 period-5 metalloid">
+  <h3>Tellur­ium</h3>
+  <span class="atomicNumber">52</span>
+  <h1>Te</h1>
+  <span class="atomicWeight">​127.60</span>
+</li>
+<li id="Iodine" class="group-17 period-5 reactiveNonMetal">
+  <h3>Iodine</h3>
+  <span class="atomicNumber">53</span>
+  <h1>I</h1>
+  <span class="atomicWeight">​126.90</span>
+</li>
+<li id="Xenon" class="group-18 period-5 nobleGas">
+    <h3>Xenon</h3>
+  <span class="atomicNumber">54</span>
+  <h1>Xe</h1>
+  <span class="atomicWeight">​131.29</span>
+</li>
+
+<li id="Cae­sium" class="group-1 period-6 alkaliMetal">
+    <h3>Cae­sium</h3>
+  <span class="atomicNumber">55</span>
+  <h1>Cs</h1>
+  <span class="atomicWeight">​132.91</span>
+</li>
+<li id="Ba­rium" class="group-2 period-6 alkaliEarthMetal">
+    <h3>Ba­rium</h3>
+  <span class="atomicNumber">56</span>
+  <h1>Ba</h1>
+  <span class="atomicWeight">​137.33</span>
+</li>
+<li id="Lan­thanum" class="group-3 period-6 lanthanide">
+   <h3>Lan­thanum</h3>
+  <span class="atomicNumber">57</span>
+  <h1>La</h1>
+  <span class="atomicWeight">​138.91</span>
+</li>
+<li id="Haf­nium" class="group-4 period-6 transitionMetal">
+   <h3>Haf­nium</h3>
+  <span class="atomicNumber">72</span>
+  <h1>Hf</h1>
+  <span class="atomicWeight">​178.49</span>
+</li>
+<li id="Tanta­lum" class="group-5 period-6 transitionMetal">
+    <h3>Tanta­lum</h3>
+  <span class="atomicNumber">73</span>
+  <h1>Ta</h1>
+  <span class="atomicWeight">​180.95</span>
+</li>
+<li id="Tung­sten" class="group-6 period-6 transitionMetal">
+   <h3>Tung­sten</h3>
+  <span class="atomicNumber">74</span>
+  <h1>W</h1>
+  <span class="atomicWeight">​183.84</span>
+</li>
+<li id="Rhe­nium" class="group-7 period-6 transitionMetal">
+   <h3>Rhe­nium</h3>
+  <span class="atomicNumber">75</span>
+  <h1>Re</h1>
+  <span class="atomicWeight">​186.21</span>
+</li>
+<li id="Os­mium" class="group-8 period-6 transitionMetal">
+    <h3>Os­mium</h3>
+  <span class="atomicNumber">76</span>
+  <h1>Os</h1>
+  <span class="atomicWeight">​190.23</span>
+</li>
+<li id="Iridium" class="group-9 period-6 transitionMetal">
+    <h3>Iridium</h3>
+  <span class="atomicNumber">77</span>
+  <h1>Ir</h1>
+  <span class="atomicWeight">​192.22</span>
+</li>
+<li id="Plat­inum" class="group-10 period-6 transitionMetal">
+  <h3>Plat­inum</h3>
+  <span class="atomicNumber">78</span>
+  <h1>Pt</h1>
+  <span class="atomicWeight">​195.08</span>
+</li>
+<li id="Gold" class="group-11 period-6 transitionMetal">
+    <h3>Gold</h3>
+  <span class="atomicNumber">79</span>
+  <h1>Au</h1>
+  <span class="atomicWeight">​196.97</span>
+</li>
+<li id="Mer­cury" class="group-12 period-6 postTransitionMetal">
+   <h3>Mer­cury</h3>
+  <span class="atomicNumber">80</span>
+  <h1>Hg</h1>
+  <span class="atomicWeight">​200.59</span>
+</li>
+<li id="Thallium" class="group-13 period-6 postTransitionMetal">
+    <h3>Thallium</h3>
+  <span class="atomicNumber">81</span>
+  <h1>Tl</h1>
+  <span class="atomicWeight">​204.38</span>
+</li>
+<li id="Lead" class="group-14 period-6 postTransitionMetal">
+   <h3>Lead</h3>
+  <span class="atomicNumber">82</span>
+  <h1>Pb</h1>
+  <span class="atomicWeight">​207.2</span>
+</li>
+<li id="Bis­muth" class="group-15 period-6 postTransitionMetal">
+  <h3>Bis­muth</h3>
+  <span class="atomicNumber">83</span>
+  <h1>Bi</h1>
+  <span class="atomicWeight">​208.98</span>
+</li>
+<li id="Polo­nium" class="group-16 period-6 postTransitionMetal">
+  <h3>Polo­nium</h3>
+  <span class="atomicNumber">84</span>
+  <h1>Po</h1>
+  <span class="atomicWeight">​[209]</span>
+  </li>
+<li id="Asta­tine" class="group-17 period-6 metalloid">
+  <h3>Asta­tine</h3>
+  <span class="atomicNumber">85</span>
+  <h1>At</h1>
+  <span class="atomicWeight">​[210]</span>
+  </li>
+
+<li id="Radon" class="group-18 period-6 nobleGas">
+    <h3>Radon</h3>
+  <span class="atomicNumber">86</span>
+  <h1>Rn</h1>
+  <span class="atomicWeight">​[222]</span>
+  </li>
+
+<li id="Fran­cium" class="group-1 period-7 alkaliMetal">
+  <h3>Fran­cium</h3>
+  <span class="atomicNumber">87</span>
+  <h1>Fr</h1>
+  <span class="atomicWeight">​[223]</span>
+  </li>
+<li id="Ra­dium" class="group-2 period-7 alkaliEarthMetal">
+  <h3>Ra­dium</h3>
+  <span class="atomicNumber">88</span>
+  <h1>Ra</h1>
+  <span class="atomicWeight">​[226]</span>
+  </li>
+<li id="Actin­ium" class="group-3 period-7 actinide">
+  <h3>Actin­ium</h3>
+  <span class="atomicNumber">89</span>
+  <h1>Ac</h1>
+  <span class="atomicWeight">​[227]</span>
+  </li>
+<li id="Ruther­fordium" class="group-4 period-7 transitionMetal">
+  <h3>Ruther­fordium</h3>
+  <span class="atomicNumber">104</span>
+  <h1>Rf</h1>
+  <span class="atomicWeight">​[267]</span>
+  </li>
+<li id="Dub­nium" class="group-5 period-7 transitionMetal">
+  <h3>Dub­nium</h3>
+  <span class="atomicNumber">105</span>
+  <h1>Db</h1>
+  <span class="atomicWeight">​[268]</span>
+  </li>
+<li id="Sea­borgium" class="group-6 period-7 transitionMetal">
+  <h3>Sea­borgium</h3>
+  <span class="atomicNumber">106</span>
+  <h1>Sg</h1>
+  <span class="atomicWeight">​[269]</span>
+  </li>
+<li id="Bohr­ium" class="group-7 period-7 transitionMetal">
+  <h3>Bohr­ium</h3>
+  <span class="atomicNumber">107</span>
+  <h1>Bh</h1>
+  <span class="atomicWeight">​[270]</span>
+  </li>
+<li id="Has­sium" class="group-8 period-7 transitionMetal">
+  <h3>Has­sium</h3>
+  <span class="atomicNumber">108</span>
+  <h1>Hs</h1>
+  <span class="atomicWeight">​[270]</span>
+  </li>
+<li id="Meit­nerium" class="group-9 period-7 unknownChemicalProperties">
+  <h3>Meit­nerium</h3>
+  <span class="atomicNumber">109</span>
+  <h1>Mt</h1>
+  <span class="atomicWeight">​[278]</span>
+  </li>
+<li id="Darm­stadtium" class="group-10 period-7 unknownChemicalProperties">
+  <h3>Darm­stadtium</h3>
+  <span class="atomicNumber">110</span>
+  <h1>Ds</h1>
+  <span class="atomicWeight">​[281]</span>
+  </li>
+<li id="Roent­genium" class="group-11 period-7 unknownChemicalProperties">
+  <h3>Roent­genium</h3>
+  <span class="atomicNumber">111</span>
+  <h1>Rg</h1>
+  <span class="atomicWeight">​[282]</span>
+  </li>
+<li id="Copernicium" class="group-12 period-7 postTransitionMetal">
+  <h3>Copernicium</h3>
+  <span class="atomicNumber">112</span>
+  <h1>Cn</h1>
+  <span class="atomicWeight">​[285]</span>
+  </li>
+<li id="Nihon­ium" class="group-13 period-7 unknownChemicalProperties">
+  <h3>Nihon­ium</h3>
+  <span class="atomicNumber">113</span>
+  <h1>Nh</h1>
+  <span class="atomicWeight">​[286]</span>
+  </li>
+<li id="Flerov­ium" class="group-14 period-7 unknownChemicalProperties">
+  <h3>Flerov­ium</h3>
+  <span class="atomicNumber">114</span>
+  <h1>Fl</h1>
+  <span class="atomicWeight">​[289]</span>
+  </li>
+<li id="Moscov­ium" class="group-15 period-7 unknownChemicalProperties">
+  <h3>Moscov­ium</h3>
+  <span class="atomicNumber">115</span>
+  <h1>Mc</h1>
+  <span class="atomicWeight">​[290]</span>
+  </li>
+<li id="Liver­morium" class="group-16 period-7 unknownChemicalProperties">
+  <h3>Liver­morium</h3>
+  <span class="atomicNumber">116</span>
+  <h1>Lv</h1>
+  <span class="atomicWeight">​[293]</span>
+  </li>
+<li id="Tenness­ine" class="group-17 period-7 unknownChemicalProperties">
+  <h3>Tenness­ine</h3>
+  <span class="atomicNumber">117</span>
+  <h1>Ts</h1>
+  <span class="atomicWeight">​[294]</span>
+  </li>
+<li id="Oga­nesson" class="group-18 period-7 unknownChemicalProperties">
+  <h3>Oga­nesson</h3>
+  <span class="atomicNumber">118</span>
+  <h1>Og</h1>
+  <span class="atomicWeight">​[294]</span>
+  </li>
+<li id="Cerium" class="group-4 period-8 lanthanide">
+  <h3>Cerium</h3>
+  <span class="atomicNumber">58</span>
+  <h1>Ce</h1>
+  <span class="atomicWeight">​140.12</span>
+</li>
+<li id="Praseo­dymium" class="group-5 period-8 lanthanide">
+  <h3>Praseo­dymium</h3>
+  <span class="atomicNumber">59</span>
+  <h1>Pr</h1>
+  <span class="atomicWeight">​140.91</span>
+</li>
+<li id="Neo­dymium" class="group-6 period-8 lanthanide">
+  <h3>Neo­dymium</h3>
+  <span class="atomicNumber">60</span>
+  <h1>Nd</h1>
+  ​<span class="atomicWeight">144.24</span>
+</li>
+<li id="Prome­thium" class="group-7 period-8 lanthanide">
+  <h3>Prome­thium</h3>
+  <span class="atomicNumber">61</span>
+  <h1>Pm</h1>
+  <span class="atomicWeight">​[145]</span>
+  </li>
+<li id="Sama­rium" class="group-8 period-8 lanthanide">
+  <h3>Sama­rium</h3>
+  <span class="atomicNumber">62</span>
+  <h1>Sm</h1>
+  <span class="atomicWeight">​150.36</span>
+</li>
+<li id="Europium" class="group-9 period-8 lanthanide">
+  <h3>Europium</h3>
+  <span class="atomicNumber">63</span>
+  <h1>Eu</h1>
+  ​<span class="atomicWeight">151.96</span>
+</li>
+<li id="Gadolin­ium" class="group-10 period-8 lanthanide">
+  <h3>Gadolin­ium</h3>
+  <span class="atomicNumber">64</span>
+  <h1>Gd</h1>
+  ​<span class="atomicWeight">157.25</span>
+</li>
+<li id="Ter­bium" class="group-11 period-8 lanthanide">
+  <h3>Ter­bium</h3>
+  <span class="atomicNumber">65</span>
+  <h1>Tb</h1>
+  ​<span class="atomicWeight">158.93</span>
+</li>
+<li id="Dyspro­sium" class="group-12 period-8 lanthanide">
+  <h3>Dyspro­sium</h3>
+  <span class="atomicNumber">66</span>
+  <h1>Dy</h1>
+  <span class="atomicWeight">​162.50</span>
+</li>
+<li id="Hol­mium" class="group-13 period-8 lanthanide">
+  <h3>Hol­mium</h3>
+  <span class="atomicNumber">67</span>
+  <h1>Ho</h1>
+  <span class="atomicWeight">​164.93</span>
+</li>
+<li id="Erbium" class="group-14 period-8 lanthanide">
+  <h3>Erbium</h3>
+  <span class="atomicNumber">68</span>
+  <h1>Er</h1>
+  <span class="atomicWeight">​167.26</span>
+</li>
+<li id="Thulium" class="group-15 period-8 lanthanide">
+  <h3>Thulium</h3>
+  <span class="atomicNumber">69</span>
+  <h1>Tm</h1>
+  <span class="atomicWeight">​168.93</span>
+</li>
+<li id="Ytter­bium" class="group-16 period-8 lanthanide">
+  <h3>Ytter­bium</h3>
+  <span class="atomicNumber">70</span>
+  <h1>Yb</h1>
+  <span class="atomicWeight">​173.05</span>
+</li>
+<li id="Lute­tium" class="group-17 period-8 lanthanide">
+  <h3>Lute­tium</h3>
+  <span class="atomicNumber">71</span>
+  <h1>Lu</h1>
+  <span class="atomicWeight">​174.97</span>
+</li>
+
+<li id="Thor­ium" class="group-4 period-9 actinide">
+  <h3>Thor­ium</h3>
+  <span class="atomicNumber">90</span>
+  <h1>Th</h1>
+  ​<span class="atomicWeight">232.04</span>
+</li>
+
+<li id="Protac­tinium" class="group-5 period-9 actinide">
+  <h3>Protac­tinium</h3>
+  <span class="atomicNumber">91</span>
+  <h1>Pa</h1>
+  <span class="atomicWeight">​231.04</span>
+</li>
+
+<li id="Ura­nium" class="group-6 period-9 actinide">
+  <h3>Ura­nium</h3>
+  <span class="atomicNumber">92</span>
+  <h1>U</h1>
+  <span class="atomicWeight">​238.03</span>
+</li>
+
+<li id="Neptu­nium" class="group-7 period-9 actinide">
+  <h3>Neptu­nium</h3>
+  <span class="atomicNumber">93</span>
+  <h1>Np</h1>
+  <span class="atomicWeight">​[237]</span>
+  </li>
+
+<li id="Pluto­nium" class="group-8 period-9 actinide">
+  <h3>Pluto­nium</h3>
+  <span class="atomicNumber">94</span>
+  <h1>Pu</h1>
+  <span class="atomicWeight">​[244]</span>
+  </li>
+
+<li id="Ameri­cium" class="group-9 period-9 actinide">
+  <h3>Ameri­cium</h3>
+  <span class="atomicNumber">95</span>
+  <h1>Am</h1>
+  <span class="atomicWeight">​[243]</span>
+  </li>
+
+<li id="Curium" class="group-10 period-9 actinide">
+  <h3>Curium</h3>
+  <span class="atomicNumber">96</span>
+  <h1>Cm</h1>
+  <span class="atomicWeight">​[247]</span>
+  </li>
+<li id="Berkel­ium" class="group-11 period-9 actinide">
+  <h3>Berkel­ium</h3>
+  <span class="atomicNumber">97</span>
+  <h1>Bk</h1>
+  <span class="atomicWeight">​[247]</span>
+  </li>
+
+<li id="Califor­nium" class="group-12 period-9 actinide">
+  <h3>Califor­nium</h3>
+  <span class="atomicNumber">98</span>
+  <h1>Cf</h1>
+  <span class="atomicWeight">​[251]</span>
+  </li>
+
+<li id="Einstei­nium" class="group-13 period-9 actinide">
+  <h3>Einstei­nium</h3>
+  <span class="atomicNumber">99</span>
+  <h1>Es</h1>
+  <span class="atomicWeight">​[252]</span>
+  </li>
+<li id="Fer­mium" class="group-14 period-9 actinide">
+  <h3>Fer­mium</h3>
+  <span class="atomicNumber">100</span>
+  <h1>Fm</h1>
+  <span class="atomicWeight">​[257]</span>
+  </li>
+
+<li id="Mende­levium" class="group-15 period-9 actinide">
+  <h3>Mende­levium</h3>
+  <span class="atomicNumber">101</span>
+  <h1>Md</h1>
+  <span class="atomicWeight">​[258]</span>
+  </li>
+
+<li id="Nobel­ium" class="group-16 period-9 actinide">
+  <h3>Nobel­ium</h3>
+  <span class="atomicNumber">102</span>
+  <h1>No</h1>
+  <span class="atomicWeight">​[259]</span>
+  </li>
+
+<li id="Lawren­cium" class="group-17 period-9 actinide">
+  <h3>Lawren­cium</h3>
+  <span class="atomicNumber">103</span>
+  <h1>Lr</h1>
+  <span class="atomicWeight">​[266]</span>
+  </li> -->
+<!-- </ul> -->
+
+<!-- <div id="#popUpWrapper"> -->
+
+<!-- <div id="alertBox"></div> -->
+
+<!-- </div> -->
+
+<!-- </div> -->
+
+<!-- <div id="popUpWrapper">
+<div id="popUp">
+  <span id="seventh-shell">
+    <div class="electron seventhShell"></div>
+    <div class="electron seventhShell"></div>
+    <span id="sixth-shell">
+      <div class="electron sixthShell"></div>
+      <div class="electron sixthShell"></div>
+      <div class="electron sixthShell"></div>
+      <span id="fifth-shell">
+        <div class="electron fifthShell"></div>
+        <div class="electron fifthShell"></div>
+        <div class="electron fifthShell"></div>
+        <div class="electron fifthShell"></div>
+        <span id="fourth-shell">
+          <div class="electron fourthShell"></div>
+          <div class="electron fourthShell"></div>
+          <div class="electron fourthShell"></div>
+          <div class="electron fourthShell"></div>
+          <div class="electron fourthShell"></div>
+          <span id="third-shell">
+            <div class="electron thirdShell"></div>
+            <div class="electron thirdShell"></div>
+            <div class="electron thirdShell"></div>
+            <div class="electron thirdShell"></div>
+            <div class="electron thirdShell"></div>
+            <div class="electron thirdShell"></div>
+            <span id="second-shell">
+              <div class="electron secondShell"></div>
+              <div class="electron secondShell"></div>
+              <div class="electron secondShell"></div>
+              <div class="electron secondShell"></div>
+              <div class="electron secondShell"></div>
+              <div class="electron secondShell"></div>
+              <span id="first-shell">
+                <div class="electron firstShell"></div>
+                <div class="electron firstShell"></div>
+                <div class="electron firstShell"></div>
+
+                      <div id="element"></div>
+
+          </span>
+      </span>
+  </span>
+</span>
+</span>
+</span>
+</span>
+</div>
+</div> -->
+
+
+</body>
+
+</html>
